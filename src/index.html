@@ -1,9 +1,4 @@
-﻿@page
-@model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
-<script type="text/javascript" src="/js/site-interactivity.js"></script>
+﻿<script type="text/javascript" src="/js/site-interactivity.js"></script>
 <script type="text/javascript" src="/js/js-yaml.js"></script>
 
 <link rel="stylesheet" href="/css/codemirror.css" type="text/css" />
@@ -14,7 +9,7 @@
 <script type="text/javascript" src="/js/tom-select.complete.min.js"></script>
 
 <div style="display:flex">
-    @* Left Column *@
+    <!-- Left Column -->
     <div id="Column1" class="column">
         <h2>Data Input</h2>
         <p>For Dependencies, Image, Include, and Exclude fields add multiple items separated by a semicolon. Variants and are not yet supported with this tool.</p>
@@ -36,7 +31,7 @@
             </select>
 
 
-            @* Package Properties tab *@
+            <!-- Package Properties tab -->
             <fieldset id="PackageProperties" class="tabcontent">
                 <table id="PackagePropertiesTable">
                     <colgroup>
@@ -107,7 +102,7 @@
                 </table>
             </fieldset>
 
-            @* Package Info tab *@
+            <!-- Package Info tab -->
             <fieldset id="PackageInfo" class="tabcontent">
                 <table id="PackageInfoTable">
                     <colgroup>
@@ -146,7 +141,7 @@
                 </table>
             </fieldset>
 
-            @* Package Assets + Options tab *@
+            <!-- Package Assets + Options tab -->
             <fieldset id="PackageAssets" class="tabcontent" >
                 <p>These assets are not part of any variant or option and will be installed for every user.</p>
                 <table id="PackageAssetsTable">
@@ -199,7 +194,7 @@
                 </table>
             </fieldset>
 
-            @* Package Variants tab *@
+            <!-- Package Variants tab -->
             <fieldset id="PackageVariants" class="tabcontent">
 
             </fieldset>
@@ -213,7 +208,7 @@
                 <option value="0">New</option>
             </select>
 
-            @* Asset Properties tab *@
+            <!-- Asset Properties tab -->
             <fieldset id="AssetProperties" class="tabcontent">
                 <legend>Asset Properties</legend>
                 <table class="inputForm">
@@ -245,12 +240,12 @@
         </div>
     </div>
 
-    @* Right Column *@
+    <!-- Right Column -->
     <div id="Column2" class="column">
         <h2>YAML Output</h2>
         <h5><span id="CurrentItemCount"></span></h5>
         <p>The contents in this code pane are automatically generated from inputs on the left, but is also able to be customized manually. Beware, manual changes may be overriden if any of the input values are changed!</p>
-        @* <p>
+        <!-- <p>
 
             @{
                 if(Model.Errors.Count == 0 && Model.YamlText is not null) {
@@ -262,13 +257,13 @@
                 }
             }
 
-        </p> *@
+        </p> -->
 
-        @* <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+        <!-- <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
         <form method="post" action="javascript:void(0);">
             <input type="submit" value="Validate" onclick="CountItems()" />
             <input id="SubmittedYaml" type="hidden" asp-for="YamlText" />
-        </form> *@
+        </form> -->
         <input type="button" onclick="ParseYaml()" value="Parse YAML" />
         <input type="button" onclick="CopyToClipboard()" value="Copy YAML to Clipboard" />
         <input type="button" onclick="ClearAll()" value="Clear All" />
