@@ -80,6 +80,8 @@ new TomSelect('#PackageSubfolder', {
 	maxItems: 1,
 	preload: true,
 	maxOptions: null,
+	create: true,
+	persist: false,
 
 	// fetch remote data
 	load: function (query, callback) {
